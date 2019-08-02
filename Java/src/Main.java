@@ -199,8 +199,6 @@ public class Main {
 //        }while(y != n);
         //        System.out.println("------------------------------------------------------------------------------------------");
 //        System.out.print( Math.PI );
-        System.out.println("Please enter the number below 10");
-        int n = Integer.parseInt(input.next());
-        System.out.printf("Value with " + n + " digits after decimal point %." +n +"f %n", Math.PI);
+
     }
 }
