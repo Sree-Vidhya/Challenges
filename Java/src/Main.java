@@ -199,12 +199,19 @@ public class Main {
 //        }while(y != n);
         //        System.out.println("------------------------------------------------------------------------------------------");
         int currentYear = 2019;
+        int i =0;
 
 //        for (currentYear = 2019; currentYear < 2100; currentYear++) {
 //            if (currentYear % 4 == 0) {
 //                System.out.println(currentYear);
 //            }
 //        }
-    
+        do{
+        if(currentYear % 4 == 0){
+            System.out.println(currentYear);
+            i++;
+        }
+            currentYear++;
+        }while(i < 20);
     }
 }
