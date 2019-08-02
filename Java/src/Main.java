@@ -198,7 +198,13 @@ public class Main {
 //            }
 //        }while(y != n);
         //        System.out.println("------------------------------------------------------------------------------------------");
-//        System.out.print( Math.PI );
+        int currentYear = 2019;
 
+//        for (currentYear = 2019; currentYear < 2100; currentYear++) {
+//            if (currentYear % 4 == 0) {
+//                System.out.println(currentYear);
+//            }
+//        }
+    
     }
 }
