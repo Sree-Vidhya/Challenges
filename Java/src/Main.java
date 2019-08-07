@@ -162,17 +162,18 @@ public class Main {
 //                break;
 //        }
 //        System.out.println("------------------------------------------------------------------------------------------");
-        //Multiplication table till 12
-//        int a = 0;
-//        for(int i = 1; i<13; i++ ){
-//            System.out.println("Multiplication of: " + i );
-//            System.out.println("-----------------------");
-//            for( int j = 1; j<13; j++){
-//                a = i * j;
-//                System.out.println( i + " X " + j + " = " + a);
-//            }
-//            System.out.println("----------------------------------");
-//        }
+//        Multiplication table till 12
+        int a = 0;
+        //Loop Labelling : Either break inner loop or continue outloop
+        outerLoop:for(int i = 1; i<13; i++ ){
+            System.out.println("Multiplication of: " + i );
+            System.out.println("-----------------------");
+            innerLoop:for( int j = 1; j<13; j++){
+                a = i * j;
+                System.out.println( i + " X " + j + " = " + a);
+            }
+            System.out.println("----------------------------------");
+        }
         //        System.out.println("------------------------------------------------------------------------------------------");
 //        double x = Math.random();
 //        double y = x * 10;
@@ -198,20 +199,34 @@ public class Main {
 //            }
 //        }while(y != n);
         //        System.out.println("------------------------------------------------------------------------------------------");
-        int currentYear = 2019;
-        int i =0;
-
-//        for (currentYear = 2019; currentYear < 2100; currentYear++) {
-//            if (currentYear % 4 == 0) {
-//                System.out.println(currentYear);
-//            }
+//        int currentYear = 2019;
+//        int i =0;
+//
+////        for (currentYear = 2019; currentYear < 2100; currentYear++) {
+////            if (currentYear % 4 == 0) {
+////                System.out.println(currentYear);
+////            }
+////        }
+//        do{
+//        if(currentYear % 4 == 0){
+//            System.out.println(currentYear);
+//            i++;
 //        }
-        do{
-        if(currentYear % 4 == 0){
-            System.out.println(currentYear);
-            i++;
+//            currentYear++;
+//        }while(i < 20);
+        //        System.out.println("------------------------------------------------------------------------------------------");
+    //Fizz Buzz
+        int i;
+        for (i =1; i <101; i++){
+            if(i % 3 == 0){
+                System.out.println("Fizz");
+            }
+            else if( i % 5 == 0){
+                System.out.println("Buzz");
+            }
+            else{
+                System.out.println(i);
+            }
         }
-            currentYear++;
-        }while(i < 20);
     }
 }
