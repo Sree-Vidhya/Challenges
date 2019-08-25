@@ -67,7 +67,10 @@ public class Main {
     public static void PlayerConditionMthd(int finalPlayerTotal, int finalDealerTotal){
         Scanner input = new Scanner(System.in);
         String reply = "See you soon";
-        if(finalPlayerTotal == 21){
+        if((finalPlayerTotal ==21) && (finalDealerTotal == 21)){
+            System.out.println("It's a tie");
+        }
+        else if(finalPlayerTotal == 21){
             System.out.println("You beat the dealer!! Congrats!..");
             System.exit(0);
         }
@@ -101,10 +104,10 @@ public class Main {
         int cardValue = 0;
         int total = 0;
         int suits = 0;
+        int round = 2;
         String DealerReply;
         String PlayerReply;
         List<String> hand = new ArrayList<>();
-        System.out.println("Round One!!");
         //player Loop round 1
         for (int i = 0; i < 2; i++) {
             int j = 0;
@@ -149,6 +152,8 @@ public class Main {
 
         //Next Round
         PlayerConditionMthd(finalPlayerTotal, finalDealerTotal);
+        round = round +1;
+        System.out.println("Round: " + round);
         System.out.println("Do You want to hit or stay?");
         PlayerReply = input.nextLine();
         int i = 0;
@@ -187,7 +192,7 @@ public class Main {
                 System.out.println("Do You want to hit or stay?");
             }
                 DealerReply = input.nextLine();
-            if ((finalDealerTotal < 17) && DealerReply.equalsIgnoreCase("s")){
+            while ((finalDealerTotal < 17) && DealerReply.equalsIgnoreCase("s")){
                 System.out.println("Since your total is less than 17, please select H");
                 DealerReply = input.nextLine();
             }
@@ -218,10 +223,30 @@ public class Main {
                     System.out.println("Dealer choice \nDo You want to hit or stay?");
                     DealerReply = input.nextLine();
                     PlayerConditionMthd(finalPlayerTotal, finalDealerTotal);
-                    if ((finalDealerTotal < 17) && DealerReply.equalsIgnoreCase("s")){
+                    while ((finalDealerTotal < 17) && DealerReply.equalsIgnoreCase("s")){
                         System.out.println("Since your total is less than 17, please select H");
                         DealerReply = input.nextLine();
                     }
+            }
+            round = round +1;
+            System.out.println("Round: " + round);
+            if(round > 3){
+                finalDealerTotal = 21-finalDealerTotal;
+                finalPlayerTotal = 21-finalPlayerTotal;
+                System.out.println("FD " + finalDealerTotal);
+                System.out.println(" PD "+ finalPlayerTotal);
+                if(finalDealerTotal < finalPlayerTotal){
+                    System.out.println("Dealer Wins!!");
+                    System.exit(0);
+                }
+                else if(finalDealerTotal == finalPlayerTotal){
+                    System.out.println("It's a tie!!");
+                    System.exit(0);
+                }
+                else{
+                    System.out.println("Player Wins!!");
+                    System.exit(0);
+                }
             }
             System.out.println("Player choice \nDo You want to hit or stay?");
             PlayerReply = input.nextLine();
