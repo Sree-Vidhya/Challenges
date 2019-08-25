@@ -47,7 +47,7 @@ public class Main {
         int gross_income = salary / 12;
         System.out.println("Please enter super rate: ");
         int rate = Integer.parseInt(input.next());
-        int super_rate = (gross_income * 9)/100;
+        int super_rate = (gross_income * rate)/100;
         System.out.println("Please enter payment start date: ");
         String payment_start = input.next();
         System.out.println("Please enter payment end date: ");

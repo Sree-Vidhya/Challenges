@@ -1,0 +1,1 @@
+{E0001=Employee{firstName='s', lastName='v', salary=1234.0, empCode='E0001'}, E0002=Employee{firstName='g', lastName='f', salary=12345.0, empCode='E0002'}}

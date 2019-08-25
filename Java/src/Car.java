@@ -1,9 +1,9 @@
 public class Car {
     String model;
     String color;
-    int year;
+    String year;
 
-    public Car(String model, String color, int year) {
+    public Car(String model, String color, String year) {
         this.model = model;
         this.color = color;
         this.year = year;

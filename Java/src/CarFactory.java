@@ -21,7 +21,7 @@ public class CarFactory {
             System.out.println("Color: ");
             String color = input.nextLine();
             System.out.println("Year: ");
-            int year = Integer.parseInt(input.nextLine());
+            String year = input.nextLine();
             Car car1 = new Car(model,color,year);
             System.out.println(car1);
             System.out.println("Do you want to enter another Car details? ");

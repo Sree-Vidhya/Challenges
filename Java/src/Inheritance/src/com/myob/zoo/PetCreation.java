@@ -15,7 +15,8 @@
 //package com.myob.zoo;
 
 package com.myob.zoo;
-
+import java.util.ArrayList;
+import java.util.Scanner;
 public class PetCreation {
 
     public static void main(String[] args) {
@@ -33,7 +34,9 @@ public class PetCreation {
 //        d2.talk();
 
         int i =0;
-        Arraylist<Animal> myZoo = new ArrayList<>();
+        ArrayList<Animal> myZoo = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+
         do {
             System.out.println("What do you want to create 1 or Cat \n 2 for dog");
             String reply = scanner.nextLine();
@@ -43,7 +46,7 @@ public class PetCreation {
                     System.out.println("Enter cat name");
                     String catname = scanner.nextLine();
                     pet = new Cat();
-                    pet.setName(catName);
+                    pet.setName(catname);
                     break;
                 case "2":
                     System.out.println("Enter dog name:");
