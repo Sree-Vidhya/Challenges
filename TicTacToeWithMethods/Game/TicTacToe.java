@@ -24,12 +24,8 @@ public class TicTacToe {
             System.exit(0);
         }
     }
-    static public void WelcomeMthd(){
-        System.out.println("Welcome to TIC TAC TOE");
-        System.out.println("----------------------");
+    static int[][] ResetMthd(){
         int arr[][] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        List<Integer> playerArr = new ArrayList<>();
-        List<Integer> computerArr = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 System.out.print(arr[i][j]);
@@ -37,6 +33,15 @@ public class TicTacToe {
             }
             System.out.println(" \n");
         }
+        return arr;
+    }
+    static public void WelcomeMthd(){
+        System.out.println("Welcome to TIC TAC TOE");
+        System.out.println("----------------------");
+        int arr[][] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        List<Integer> playerArr = new ArrayList<>();
+        List<Integer> computerArr = new ArrayList<>();
+        ResetMthd();
     }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -47,9 +52,12 @@ public class TicTacToe {
         int min = 1;
         int max = 9;
         int invalidInputs = 0;
-        WelcomeMthd();
+//        WelcomeMthd();
 
         while (reply.equalsIgnoreCase("y")) {
+            if(playerArr.size() == 0) {
+                arr = ResetMthd();
+            }
             int computerInput = ThreadLocalRandom.current().nextInt(min, max + 1);
             System.out.println("Computer input: " + computerInput);
             System.out.println("Please enter the number to play tic tac toe");
