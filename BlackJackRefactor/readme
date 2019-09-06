@@ -1,1 +1,6 @@
-
+Black Jack with Classes and objects. 
+The flow of the game was from Cards Class to Deck class and from deck to Play Class..
+Where the cards are shuffled, one card is drawn and the drawn card is added to the hand, the hand is display with card face and suit. 
+Card value is seperately displayed.
+Another Class called Rules holds everything that includes rules checking if the player or dealer has won or Busted and if the player or dealer should continue.
+Finally there is a runnable class called Game app: All the methods from other classes are called in here
