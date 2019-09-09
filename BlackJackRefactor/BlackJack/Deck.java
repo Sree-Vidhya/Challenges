@@ -3,7 +3,8 @@ package BlackJack;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Deck {
+public class Deck
+{
     List<Card> deck;
     public List<Card> fiftyTwoCardDeck()
     {

@@ -1,6 +1,7 @@
 package BlackJack;
 
-public class Card {
+public class Card
+{
     String Suit;
     int Value;
     String Face;
@@ -12,7 +13,8 @@ public class Card {
         Face = face;
     }
 
-    public Card() {
+    public Card()
+    {
 
     }
 

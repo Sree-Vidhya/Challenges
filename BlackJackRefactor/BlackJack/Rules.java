@@ -59,11 +59,27 @@ public class Rules
         {
             reply = "H";
         }
-        else if((total >17) && (total < 21))
+        else if((total > 17) && (total < 21))
         {
             reply = "S";
         }
         return reply;
     }
+    public void ifBothStayed(String dealerReply, String playerReply, int aceValuePlayer, int aceValueDealer)
+    {
 
+        if(dealerReply.equalsIgnoreCase("s")&&(playerReply.equalsIgnoreCase("s")))
+        {
+            if(aceValuePlayer > aceValueDealer)
+            {
+                System.out.println("You beat the dealer!! Congrats!..");
+                System.exit(0);
+            }
+            else if (aceValuePlayer < aceValueDealer)
+            {
+                System.out.println("Dealer Win!! Better Luck Next time");
+                System.exit(0);
+            }
+        }
+    }
 }
