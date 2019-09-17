@@ -1,4 +1,4 @@
-Object-Oriented Concepts:
+Object-Oriented Principles:
 Abstraction in real world:
 •	Process of hiding the implementation details and shows only the functionality.
 •	The user will have information only about what the object does and not how it does.
@@ -138,9 +138,11 @@ package OOPs.Encapsulation;
 public class Account
 {
     //private variables
+    
     private int acc_no;
     private String name ,email;
     private float amount;
+
 // Public Getter and Setter.
 
     public int getAcc_no() {
@@ -195,3 +197,70 @@ public class AccountApplication
 Polymorphism:
 •	Polymorphism allows us to perform a single action in different ways. Define one interface and have multiple implementations.
 •	There are two types of polymorphism.
+o	Run time/Dynamic Polymorphism.
+o	Compile time/Static polymorphism.
+•	Polymorphism that is resolved during compiler time is known as static polymorphism.
+•	Method overloading is an example of compile time polymorphism.
+•	same method add () which add method would be called is determined by the parameter list at the compile time. That is the reason this is also known as compile time polymorphism.
+
+Compile time polymorphism/Method Overloading :
+Example:
+package OOPs;
+ class SimpleCalculator
+    {
+        int add(int a, int b)
+        {
+            return a+b;
+        }
+        int  add(int a, int b, int c)
+        {
+            return a+b+c;
+        }
+    }
+    public class MthdOverLoading
+    {
+        public static void main(String args[])
+        {
+            SimpleCalculator obj = new SimpleCalculator();
+            System.out.println(obj.add(10, 20));
+            System.out.println(obj.add(10, 20, 30));
+        }
+    }
+
+RUNTIME POLYMORPHISM (OR DYNAMIC POLYMORPHISM)/METHOD OVERRIDING:
+o	Dynamic polymorphism is a process in which a call to an overridden method is resolved at runtime, that’s why it is called runtime polymorphism.
+o	A method is overridden, not the variables, so runtime polymorphism can't be achieved by variables.
+
+Example:
+
+package OOPs;
+
+public class RuntimePolymorphismDog
+{
+    void appearance()
+    {
+        System.out.println("Looks like ");
+    }
+}
+class Samoyed extends RuntimePolymorphismDog
+{
+    void appearance()
+    {
+        System.out.println("White Fluff!! ");
+    }
+}
+class Labrador extends RuntimePolymorphismDog
+{
+    void appearance()
+    {
+        System.out.println("Chocolate Fluff!! ");
+    }
+}
+class Looks{
+    public static void main(String[] args) {
+        RuntimePolymorphismDog Summer = new Samoyed();
+        Summer.appearance();
+        Summer = new Labrador();
+        Summer.appearance();
+    }
+}
