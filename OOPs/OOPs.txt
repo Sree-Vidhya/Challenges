@@ -1,4 +1,4 @@
-Object-Oriented Principles:
+Object-Oriented Concepts:
 Abstraction in real world:
 •	Process of hiding the implementation details and shows only the functionality.
 •	The user will have information only about what the object does and not how it does.
