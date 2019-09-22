@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5caaee1a-3f97-4555-909b-b73b8e580c52" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../.idea/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../BlackJack/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../BlackJack/src/BlackJack/Dealer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../BlackJack/src/BlackJack/FiftyTwoCardDeck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../BlackJack/src/BlackJack/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../BlackJack/src/BlackJack/Hit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../BlackJackRefactor.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Card.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CardGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Deck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rules.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Testing/Testing.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Testing/src/MessageUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Testing/src/StringCalc/StringCalcTestRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Testing/src/StringCalc/StringCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Testing/src/StringCalc/StringCalculatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Testing/src/TestJunit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Testing/src/TestRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../TicTacToe/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../TicTacToe/src/Game/RC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../TicTacToe/src/Game/TTT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../TicTacToe/src/Game/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../TicTacToe/src/Game/TicTacToe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../BlackJack/out/production/BlackJack/BlackJack/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../BlackJack/out/production/BlackJack/BlackJack/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../BlackJack/out/production/BlackJack/BlackJack/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../BlackJack/out/production/BlackJack/BlackJack/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../BlackJack/out/production/BlackJack/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../BlackJack/out/production/BlackJack/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../BlackJack/out/production/BlackJack/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../BlackJack/src/BlackJack/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../BlackJack/src/BlackJack/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../BlackJack/src/BlackJack/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../BlackJack/src/BlackJack/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../BlackJack/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../BlackJack/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../BlackJack/src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../BlackJack/src/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../TicTacToe/out/production/TicTacToe/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../TicTacToe/out/production/TicTacToe/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../TicTacToe/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../TicTacToe/src/Main.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectId" id="1QVLIDWKNT08tsJhyXsFMnLlKFS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5caaee1a-3f97-4555-909b-b73b8e580c52" name="Default Changelist" comment="" />
+      <created>1567850734372</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567850734372</updated>
+      <workItem from="1567850735572" duration="6000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

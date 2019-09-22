@@ -1,19 +1,29 @@
 package BlackJack;
 
-public class Card {
+public class Card
+{
     String Suit;
-    String Value;
+    int Value;
+    String Face;
 
-    public Card(String suit, String value) {
+    public Card(String suit, int value, String face)
+    {
         Suit = suit;
         Value = value;
+        Face = face;
+    }
+
+    public Card() {
+
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "Card{" +
                 "Suit='" + Suit + '\'' +
-                ", Value='" + Value + '\'' +
+                ", Value=" + Value +
+                ", Face='" + Face + '\'' +
                 '}';
     }
 }
