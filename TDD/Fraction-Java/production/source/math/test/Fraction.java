@@ -1,19 +1,20 @@
 package math.test;
 
-import org.junit.Before;
-
 public class Fraction
 {
-   public Fraction(int integerValue)
-   {
-   }
-   public Fraction plus(Fraction that)
+   private final int integerValue;
+
+    public Fraction(int integerValue) {
+        this.integerValue = integerValue;
+    }
+
+    public Fraction plus(Fraction that)
    {
        return this;
    }
 
     public int intValue()
     {
-        return 0;
+        return integerValue;
     }
 }
