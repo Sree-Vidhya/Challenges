@@ -13,10 +13,10 @@ public class PayslipGeneratorApplication {
         double extra_cents = 0.00;
         double base_salary = 0.00;
         String answer;
-        System.out.println("Enter the file name to create:");
-        String fileName = input.nextLine();
-        try {
-            FileWriter filewriter=new FileWriter(fileName);
+//        System.out.println("Enter the file name to create:");
+//        String fileName = input.nextLine();
+//        try {
+//            FileWriter filewriter=new FileWriter(fileName);
         do {
 
             System.out.println("Please enter your first name");
@@ -52,34 +52,34 @@ public class PayslipGeneratorApplication {
             System.out.println("Your payslip has been generated");
             System.out.println("-----------------------------------");
             System.out.println("Name:           " + fname + " " + sname);
-            filewriter.write(fname);
-            filewriter.write(sname);
-            filewriter.append('\n');
+//            filewriter.write(fname);
+//            filewriter.write(sname);
+//            filewriter.append('\n');
             System.out.println("Pay period:     " + sDate + "-" + eDate);
-            filewriter.write(sDate);
-            filewriter.write("-");
-            filewriter.write(eDate);
-            filewriter.append('\n');
+//            filewriter.write(sDate);
+//            filewriter.write("-");
+//            filewriter.write(eDate);
+//            filewriter.append('\n');
             System.out.println("Gross income:   " + grossIncome);
-            filewriter.write(Double.toString(grossIncome));
-            filewriter.append('\n');
+//            filewriter.write(Double.toString(grossIncome));
+//            filewriter.append('\n');
             System.out.println("Income tax:     " + income_tax);
-            filewriter.write(Double.toString(income_tax));
-            filewriter.append('\n');
+//            filewriter.write(Double.toString(income_tax));
+//            filewriter.append('\n');
             System.out.println("Net Income:     " + net_income);
-            filewriter.write(Double.toString(net_income));
-            filewriter.append('\n');
+//            filewriter.write(Double.toString(net_income));
+//            filewriter.append('\n');
             System.out.println("Super:          " + ssuperRate);
-            filewriter.write(Double.toString(ssuperRate));
-            filewriter.append('\n');
+//            filewriter.write(Double.toString(ssuperRate));
+//            filewriter.append('\n');
             System.out.println("-----------------------------------");
             System.out.println("Thank you for using MYOB!");
             System.out.println("Do you want to continue?");
             answer = input.next();
         }while(!(answer.equalsIgnoreCase("n")));
-            filewriter.flush();
-            filewriter.close();
-} catch (IOException e) {
-            e.printStackTrace();
+//            filewriter.flush();
+//            filewriter.close();
+//} catch (IOException e) {
+//            e.printStackTrace();
         }
-    }}
+    }

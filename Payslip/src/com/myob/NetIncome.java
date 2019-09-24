@@ -1,7 +1,7 @@
 package com.myob;
 
-public interface NetIncome {
-//    double grossIncome =0;
+public interface NetIncome
+{
     double incomeTax =0;
     double NetIncomeMthd(double salary);
 }

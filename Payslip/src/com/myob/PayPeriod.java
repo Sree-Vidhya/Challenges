@@ -1,6 +1,7 @@
 package com.myob;
 
-public interface PayPeriod {
+public interface PayPeriod
+{
     String startingPeriod();
     String endingPeriod();
 }

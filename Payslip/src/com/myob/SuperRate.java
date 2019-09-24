@@ -1,7 +1,6 @@
 package com.myob;
 
-public interface SuperRate {
-//    double grossIncome =0;
-//    double rateOfSuper = 0;
+public interface SuperRate
+{
     double SuperRateMthd(double salary);
 }
