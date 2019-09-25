@@ -46,9 +46,9 @@ public class SellOneItemTest
         public void onBarcode(String barcode) {
             if("12345".equals(barcode))
             display.setText("$7.95");
-            else
+            else if("23456".equals(barcode))
                 display.setText("$12.50");
-
+            
         }
     }
 }
