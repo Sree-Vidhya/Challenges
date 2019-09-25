@@ -1,16 +1,12 @@
 package test;
 
-import org.junit.Ignore;
 import org.junit.Test;
-
-import javax.swing.*;
-
 import static org.junit.Assert.assertEquals;
 
 public class SellOneItemTest
 {
     @Test
-    public void name() throws Exception {
+    public void productFound() throws Exception {
         final Display display = new Display();
         final Sale sale = new Sale(display);
         sale.onBarcode("12345");
@@ -30,6 +26,14 @@ public class SellOneItemTest
         final Sale sale = new Sale(display);
         sale.onBarcode("99999");
         assertEquals("product Not Found for 99999", display.getText());
+    }
+
+    @Test
+    public void emptyBarcode() throws Exception{
+        final Display display = new Display();
+        final Sale sale = new Sale(display);
+        sale.onBarcode("");
+        assertEquals("scanning error:empty barcode",display.getText());
     }
 
     public static class Display {
@@ -54,6 +58,8 @@ public class SellOneItemTest
             display.setText("$7.95");
             else if("23456".equals(barcode))
                 display.setText("$12.50");
+            else if("".equals(barcode))
+                display.setText("scanning error:empty barcode");
             else
                 display.setText("product Not Found for " + barcode);
 
