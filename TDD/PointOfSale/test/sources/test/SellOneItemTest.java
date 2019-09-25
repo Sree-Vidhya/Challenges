@@ -44,11 +44,10 @@ public class SellOneItemTest
     }
 
     public static class Sale {
+        private Display display;
         public Sale(Display display) {
             this.display = display;
         }
-
-        private Display display;
 
         public void onBarcode(String barcode) {
             if("12345".equals(barcode))
@@ -56,7 +55,7 @@ public class SellOneItemTest
             else if("23456".equals(barcode))
                 display.setText("$12.50");
             else
-                display.setText("product Not Found for 99999");
+                display.setText("product Not Found for " + barcode);
 
 
         }
