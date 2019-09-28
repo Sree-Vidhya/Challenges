@@ -48,10 +48,7 @@ public class SellOneItemTest
     public void emptyBarcode() throws Exception
     {
         final Display display = new Display();
-        final Sale sale = new Sale(display,new HashMap<String, String>() {{
-            put("12345", "$7.95");
-            put("23456", "$12.50");
-        }});
+        final Sale sale = new Sale(display,new HashMap<String, String>(){{}});
         sale.onBarcode("");
         assertEquals("scanning error:empty barcode",display.getText());
     }
@@ -81,6 +78,7 @@ public class SellOneItemTest
         public void onBarcode(String barcode)
         {
             if("".equals(barcode)) {
+                //SMELL Refused bequest; move this up the call stack?
                 display.setText("scanning error:empty barcode");
                 return;
             }
