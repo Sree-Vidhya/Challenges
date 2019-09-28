@@ -78,13 +78,25 @@ public class SellOneItemTest
         {
             if("".equals(barcode)) {
                 //SMELL Refused bequest; move this up the call stack?
-                display.setText("scanning error:empty barcode");
+                displayEmptyBarcodeMessage("scanning error:empty barcode");
                 return;
             }
-            if (pricesByBarCode.containsKey(barcode))
-                display.setText(pricesByBarCode.get(barcode));
-            else
-                display.setText("product Not Found for " + barcode);
+            if (pricesByBarCode.containsKey(barcode)) {
+                displayPrice(barcode);
+            } else
+                displayProductNotFOundMessage(barcode);
+        }
+
+        private void displayPrice(String barcode) {
+            display.setText(pricesByBarCode.get(barcode));
+        }
+
+        private void displayProductNotFOundMessage(String barcode) {
+            display.setText("product Not Found for " + barcode);
+        }
+
+        private void displayEmptyBarcodeMessage(String s) {
+            display.setText(s);
         }
     }
 }
