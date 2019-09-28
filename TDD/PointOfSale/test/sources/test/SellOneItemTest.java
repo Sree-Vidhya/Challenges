@@ -3,7 +3,6 @@ package test;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -78,25 +77,29 @@ public class SellOneItemTest
         {
             if("".equals(barcode)) {
                 //SMELL Refused bequest; move this up the call stack?
-                displayEmptyBarcodeMessage("scanning error:empty barcode");
+                displayEmptyBarcodeMessage();
                 return;
             }
             if (pricesByBarCode.containsKey(barcode)) {
-                displayPrice(barcode);
+                displayPrice(findPrice(barcode));
             } else
-                displayProductNotFOundMessage(barcode);
+                displayProductNotFoundMessage(barcode);
         }
 
-        private void displayPrice(String barcode) {
-            display.setText(pricesByBarCode.get(barcode));
+        private void displayPrice(String priceAsText) {
+            display.setText(priceAsText);
         }
 
-        private void displayProductNotFOundMessage(String barcode) {
+        private String findPrice(String barcode) {
+            return pricesByBarCode.get(barcode);
+        }
+
+        private void displayProductNotFoundMessage(String barcode) {
             display.setText("product Not Found for " + barcode);
         }
 
-        private void displayEmptyBarcodeMessage(String s) {
-            display.setText(s);
+        private void displayEmptyBarcodeMessage() {
+            display.setText("scanning error:empty barcode");
         }
     }
 }
