@@ -63,6 +63,18 @@ public class SellOneItemTest
         {
             this.text = text;
         }
+
+        public void displayPrice(String priceAsText) {
+            setText(priceAsText);
+        }
+
+        public void displayProductNotFoundMessage(String barcode) {
+            setText("product Not Found for " + barcode);
+        }
+
+        public void displayEmptyBarcodeMessage() {
+            setText("scanning error:empty barcode");
+        }
     }
     public static class Sale
     {
@@ -77,30 +89,19 @@ public class SellOneItemTest
         {
             if("".equals(barcode)) {
                 //SMELL Refused bequest; move this up the call stack?
-                displayEmptyBarcodeMessage();
+                display.displayEmptyBarcodeMessage();
                 return;
             }
             final String priceAsText = findPrice(barcode);
             if (priceAsText == null) {
-                displayProductNotFoundMessage(barcode);
+                display.displayProductNotFoundMessage(barcode);
             } else
-            displayPrice(priceAsText);
-        }
-
-        private void displayPrice(String priceAsText) {
-            display.setText(priceAsText);
+            display.displayPrice(priceAsText);
         }
 
         private String findPrice(String barcode) {
             return pricesByBarCode.get(barcode);
         }
 
-        private void displayProductNotFoundMessage(String barcode) {
-            display.setText("product Not Found for " + barcode);
-        }
-
-        private void displayEmptyBarcodeMessage() {
-            display.setText("scanning error:empty barcode");
-        }
     }
 }
