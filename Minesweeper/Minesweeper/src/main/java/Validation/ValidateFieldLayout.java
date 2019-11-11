@@ -1,10 +1,13 @@
 package Validation;
 
-import java.util.Scanner;
 
 public class ValidateFieldLayout implements ValidateUserInput {
 
-    Scanner input = new Scanner(System.in);
+    FieldInput fieldInput;
+
+    public ValidateFieldLayout(FieldInput fieldInput) {
+        this.fieldInput = fieldInput;
+    }
 
     public boolean validateTheInput(String valueToValidate) {
         try {
@@ -36,11 +39,12 @@ public class ValidateFieldLayout implements ValidateUserInput {
     }
     public String enterFieldLayout()
     {
-        String fieldLayout = input.nextLine();
+        String fieldLayout = fieldInput.inputNextLine();
+
         while(validateTheFormatandLength(fieldLayout) == false)
         {
             System.out.println("Not a Valid integer. Try Again!.");
-            fieldLayout = input.nextLine();
+            fieldLayout = fieldInput.inputNextLine();
         }
         return fieldLayout;
     }
