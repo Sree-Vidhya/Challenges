@@ -10,6 +10,7 @@ import static org.mockito.Mockito.when;
 
 public class ValidateFieldContentTest {
     FieldInput fieldInputMock = Mockito.mock(FieldInput.class);
+    ValidateFieldLayout validateLayout = new ValidateFieldLayout(fieldInputMock);
     ValidateFieldContent field = new ValidateFieldContent(fieldInputMock);
     @Test
     public void validInputReturnsTrue()
@@ -52,12 +53,11 @@ public class ValidateFieldContentTest {
         testField.add("*");
         testField.add(".");
         testField.add(".");
-        when(fieldInputMock.eachCellInput())
+        when(fieldInputMock.inputSameLine())
                 .thenReturn(".")
                 .thenReturn("*")
                 .thenReturn(".")
                 .thenReturn(".");
-
         assertEquals(testField,field.fieldCreated(4));
     }
 }

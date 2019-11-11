@@ -26,7 +26,7 @@ public class ValidateFieldContent implements ValidateUserInput
     public int calculateToTalNumberofcells( String fieldLayout)
     {
         int totalNumberOfCells = 0;
-        ValidateFieldLayout gridLayout = new ValidateFieldLayout();
+        ValidateFieldLayout gridLayout = new ValidateFieldLayout(fieldInput);
         if(gridLayout.validateTheFormatandLength(fieldLayout) == true) {
             String[] layout = (fieldLayout.split(""));
             int numberOfRows = Integer.parseInt(layout[0]);
@@ -39,10 +39,10 @@ public class ValidateFieldContent implements ValidateUserInput
 
         System.out.println("Enter the Input for Each Cell: \n'.' for safe zone.\n'*' for mine zone");
         for(int i =0 ; i < totalNumberOfCells ; i++) {
-            eachCell = fieldInput.eachCellInput();
+            eachCell = fieldInput.inputSameLine();
             while (validateTheInput(eachCell) == false) {
                 System.out.println("Not a Valid Input");
-                eachCell = fieldInput.eachCellInput();
+                eachCell = fieldInput.inputSameLine();
             }
             field.add(eachCell);
         }
