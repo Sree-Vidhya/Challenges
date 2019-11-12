@@ -6,14 +6,16 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/Application.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/Field.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/FieldLayout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Game/GameInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Game/GameOutput.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/Validation/FieldInput.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/Validation/ValidateFieldContent.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/Validation/ValidateFieldLayout.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/Validation/ValidateUserInput.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/FieldLayoutTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/FieldTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/GameTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/GameTest/GameInputTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/GameTest/GameOutputTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/Validation/ValidateFieldContentTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/Validation/ValidateFieldLayoutTest.java" afterDir="false" />
     </list>
@@ -65,6 +67,12 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="GameTest" />
+      <recent name="Game" />
+      <recent name="Validation" />
+      <recent name="" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -81,7 +89,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RunManager" selected="JUnit.GameOutputTest.calc">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Application" />
       <module name="Minesweeper" />
@@ -89,51 +97,57 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FieldLayoutTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameInputTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Minesweeper" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FieldLayoutTest" />
+      <option name="PACKAGE_NAME" value="GameTest" />
+      <option name="MAIN_CLASS_NAME" value="GameTest.GameInputTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FieldLayoutTest.returnsFieldLayout" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameOutputTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Minesweeper" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FieldLayoutTest" />
-      <option name="METHOD_NAME" value="returnsFieldLayout" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GameTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="GameTest" />
+      <option name="MAIN_CLASS_NAME" value="GameTest.GameOutputTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameOutputTest.calc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Minesweeper" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GameTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="GameTest" />
+      <option name="MAIN_CLASS_NAME" value="GameTest.GameOutputTest" />
+      <option name="METHOD_NAME" value="calc" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ValidateFieldContentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameOutputTest.displayOutput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Minesweeper" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Validation.*" />
+          <option name="PATTERN" value="GameTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Validation" />
-      <option name="MAIN_CLASS_NAME" value="Validation.ValidateFieldContentTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ValidateFieldContentTest.testFieldCreated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Minesweeper" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Validation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Validation" />
-      <option name="MAIN_CLASS_NAME" value="Validation.ValidateFieldContentTest" />
-      <option name="METHOD_NAME" value="testFieldCreated" />
+      <option name="PACKAGE_NAME" value="GameTest" />
+      <option name="MAIN_CLASS_NAME" value="GameTest.GameOutputTest" />
+      <option name="METHOD_NAME" value="displayOutput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -141,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameOutputTest.calc" />
+        <item itemvalue="JUnit.GameOutputTest" />
         <item itemvalue="Application.Application" />
-        <item itemvalue="JUnit.ValidateFieldContentTest" />
-        <item itemvalue="JUnit.FieldLayoutTest" />
-        <item itemvalue="JUnit.FieldLayoutTest.returnsFieldLayout" />
-        <item itemvalue="JUnit.ValidateFieldContentTest.testFieldCreated" />
+        <item itemvalue="JUnit.GameOutputTest.displayOutput" />
+        <item itemvalue="JUnit.GameInputTest" />
       </list>
     </recent_temporary>
   </component>
@@ -161,6 +175,12 @@
       <updated>1573119540058</updated>
       <workItem from="1573119542763" duration="29588000" />
       <workItem from="1573378283780" duration="10853000" />
+      <workItem from="1573423593615" duration="8289000" />
+      <workItem from="1573434438768" duration="95000" />
+      <workItem from="1573434544582" duration="32000" />
+      <workItem from="1573434578289" duration="1277000" />
+      <workItem from="1573438874934" duration="5235000" />
+      <workItem from="1573508195984" duration="16839000" />
     </task>
     <servers />
   </component>
