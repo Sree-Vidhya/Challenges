@@ -12,6 +12,6 @@ public class Application {
         ValidateFieldContent validateContent = new ValidateFieldContent(input);
         GameInput gameInput = new GameInput(input,validateLayout,validateContent);
         GameOutput gameOutput = new GameOutput(gameInput);
-        gameOutput.displayOutput();
+        gameOutput.calc(gameOutput.displayOutput());
     }
 }
