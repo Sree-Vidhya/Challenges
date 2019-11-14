@@ -7,31 +7,30 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
 
 public class ValidateFieldLayoutTest {
-        FieldInput inputMock = Mockito.mock(FieldInput.class);
-    ValidateFieldLayout validateUserInput = new ValidateFieldLayout(inputMock);
+        FieldInput fieldInputMock = Mockito.mock(FieldInput.class);
+    ValidateFieldLayout validateFieldLayout = new ValidateFieldLayout(fieldInputMock);
 
         @Test
         public void testStringInputReturnsFalse() {
-            when(inputMock.inputNextLine())
+            when(fieldInputMock.inputNextLine())
                     .thenReturn("a");
-            ValidateFieldLayout validateUserInput = new ValidateFieldLayout(inputMock);
-            assertEquals(false,validateUserInput.validateTheInput(inputMock.inputNextLine()));
+            assertEquals(false,validateFieldLayout.validateTheInput(fieldInputMock.inputNextLine()));
         }
         @Test
         public void testTwoIntegerReturnsTrue() {
-            when(inputMock.inputNextLine())
+            when(fieldInputMock.inputNextLine())
                     .thenReturn("44");
-            assertEquals(true,validateUserInput.checkingifInputLengthIsTwo(inputMock.inputNextLine()));
+            assertEquals(true,validateFieldLayout .checkingifInputLengthIsTwo(fieldInputMock.inputNextLine()));
         }
         @Test
         public void testOneIntegerReturnsFalse() {
-            when(inputMock.inputNextLine())
+            when(fieldInputMock.inputNextLine())
                     .thenReturn("4");
-            assertEquals(false,validateUserInput.checkingifInputLengthIsTwo(inputMock.inputNextLine()));
+            assertEquals(false,validateFieldLayout .checkingifInputLengthIsTwo(fieldInputMock.inputNextLine()));
         }
         @Test
         public void testEmptyInputReturnsFalse() {
-            when(inputMock.inputNextLine())
+            when(fieldInputMock.inputNextLine())
                     .thenReturn("");
-            assertEquals(false,validateUserInput.validateTheInput(inputMock.inputNextLine())); }
+            assertEquals(false,validateFieldLayout .validateTheInput(fieldInputMock.inputNextLine())); }
 }

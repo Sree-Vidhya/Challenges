@@ -10,17 +10,17 @@ public class ValidateFieldLayout implements ValidateUserInput {
         this.fieldInput = fieldInput;
     }
 
-    public boolean validateTheInput(String valueToValidate) {
+    public boolean validateTheInput(String inputToValidate) {
         try {
-            Integer.parseInt(valueToValidate);
+            Integer.parseInt(inputToValidate);
             return true;
         } catch (NumberFormatException ex) {
             return false;
         }
     }
-    public boolean checkingifInputLengthIsTwo(String fieldLayout)
+    public boolean checkingifInputLengthIsTwo(String inputToValidate)
     {
-        if(fieldLayout.length() == 2)
+        if(inputToValidate.length() == 2)
         {
             return true;
         }
@@ -29,12 +29,12 @@ public class ValidateFieldLayout implements ValidateUserInput {
             return false;
         }
     }
-    public boolean validateTheFormatandLength(String valueToValidate)
+    public boolean validateTheFormatandLength(String inputToValidate)
     {
         boolean validation = false;
-        if(validateTheInput(valueToValidate) == true)
+        if(validateTheInput(inputToValidate) == true)
         {
-            validation =  checkingifInputLengthIsTwo(valueToValidate);
+            validation =  checkingifInputLengthIsTwo(inputToValidate);
         }
         return validation;
     }
