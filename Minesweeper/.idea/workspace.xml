@@ -89,7 +89,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.GameOutputTest.calc">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Application" />
       <module name="Minesweeper" />
@@ -155,9 +155,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application" />
         <item itemvalue="JUnit.GameOutputTest.calc" />
         <item itemvalue="JUnit.GameOutputTest" />
-        <item itemvalue="Application.Application" />
         <item itemvalue="JUnit.GameOutputTest.displayOutput" />
         <item itemvalue="JUnit.GameInputTest" />
       </list>
@@ -180,7 +180,7 @@
       <workItem from="1573434544582" duration="32000" />
       <workItem from="1573434578289" duration="1277000" />
       <workItem from="1573438874934" duration="5235000" />
-      <workItem from="1573508195984" duration="16839000" />
+      <workItem from="1573508195984" duration="34784000" />
     </task>
     <servers />
   </component>

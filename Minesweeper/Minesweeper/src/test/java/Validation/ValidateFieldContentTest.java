@@ -10,54 +10,36 @@ import static org.mockito.Mockito.when;
 
 public class ValidateFieldContentTest {
     FieldInput fieldInputMock = Mockito.mock(FieldInput.class);
-    ValidateFieldLayout validateLayout = new ValidateFieldLayout(fieldInputMock);
-    ValidateFieldContent field = new ValidateFieldContent(fieldInputMock);
+    ValidateFieldContent validateFieldContent = new ValidateFieldContent(fieldInputMock);
     @Test
     public void validInputReturnsTrue()
     {
-        assertEquals(true,field.validateTheInput("."));
-        assertEquals(true,field.validateTheInput("*"));
+        assertEquals(true,validateFieldContent.validateTheInput("."));
+        assertEquals(true,validateFieldContent.validateTheInput("*"));
     }
     @Test
     public void invalidInputReturnsFalse()
     {
-        assertEquals(false,field.validateTheInput("a"));
+        assertEquals(false,validateFieldContent.validateTheInput("a"));
     }
     @Test
     public void emptyInputReturnsFalse()
     {
-        assertEquals(false,field.validateTheInput(""));
-    }
-    @Test
-    public void doubleIntegerReturnsTotalNumberOfCells()
-    {
-        assertEquals(4,field.calculateToTalNumberofcells("22"));
-    }
-    @Test
-    public void invalidInputReturnsZero()
-    {
-        assertEquals(0,field.calculateToTalNumberofcells("a"));
-        assertEquals(0,field.calculateToTalNumberofcells("aa"));
-        assertEquals(0,field.calculateToTalNumberofcells("2"));
-    }
-    @Test
-    public void emptyInputReturnsZero()
-    {
-        assertEquals(0,field.calculateToTalNumberofcells(""));
+        assertEquals(false,validateFieldContent.validateTheInput(""));
     }
 
     @Test
     public void testFieldCreated(){
-        ArrayList<String> testField = new ArrayList<String>();
-        testField.add(".");
-        testField.add("*");
-        testField.add(".");
-        testField.add(".");
+        ArrayList<String> testFieldContent = new ArrayList<String>();
+        testFieldContent.add(".");
+        testFieldContent.add("*");
+        testFieldContent.add(".");
+        testFieldContent.add(".");
         when(fieldInputMock.inputSameLine())
                 .thenReturn(".")
                 .thenReturn("*")
                 .thenReturn(".")
                 .thenReturn(".");
-        assertEquals(testField,field.fieldCreated(4));
+        assertEquals(testFieldContent,validateFieldContent.userFieldInput(4));
     }
 }

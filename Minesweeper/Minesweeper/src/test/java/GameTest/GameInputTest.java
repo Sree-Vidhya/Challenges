@@ -1,5 +1,6 @@
 package GameTest;
 
+import Field.FieldLayout;
 import Game.GameInput;
 import Validation.FieldInput;
 import Validation.ValidateFieldContent;
@@ -13,39 +14,43 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
 
 public class GameInputTest {
-    FieldInput inputMock = Mockito.mock(FieldInput.class);
-    ValidateFieldLayout validateLayout = new ValidateFieldLayout(inputMock);
-    ValidateFieldLayout layoutMock = Mockito.mock(ValidateFieldLayout.class);
-    ValidateFieldContent contentMock = Mockito.mock(ValidateFieldContent.class);
-    GameInput gameInput = new GameInput(inputMock,validateLayout,contentMock);
+    FieldInput fieldInputMock = Mockito.mock(FieldInput.class);
+    ValidateFieldLayout validateFieldLayout = new ValidateFieldLayout(fieldInputMock);
+    ValidateFieldLayout validateFieldLayoutMock = Mockito.mock(ValidateFieldLayout.class);
+    ValidateFieldContent validateFieldContentMock = Mockito.mock(ValidateFieldContent.class);
+    FieldLayout fieldLayoutMock = Mockito.mock(FieldLayout.class);
+    GameInput gameInput = new GameInput(fieldInputMock,validateFieldLayout,validateFieldContentMock);
     @Test
-    public void returnslayoutmxn() {
-        when(inputMock.inputNextLine())
+    public void returnsfieldLayout() {
+        when(fieldInputMock.inputNextLine())
                 .thenReturn("22");
-        assertEquals("22", gameInput.matrixLayout());
+        assertEquals("22", gameInput.fieldLayout());
     }
     @Test
     public void returnTotalNumberOfCells(){
-        when(inputMock.inputNextLine())
+        when(fieldInputMock.inputNextLine())
                 .thenReturn("22");
-        gameInput.matrixLayout();
-        when(layoutMock.validateTheFormatandLength(inputMock.inputNextLine())).thenReturn(true);
-        when(contentMock.calculateToTalNumberofcells(inputMock.inputNextLine())).thenReturn(4);
-        assertEquals(4, gameInput.totalNumberOfCells(inputMock.inputNextLine()));
+        gameInput.fieldLayout();
+        when(validateFieldLayoutMock.validateTheFormatandLength(fieldInputMock.inputNextLine())).thenReturn(true);
+        when(fieldLayoutMock.calculatingNumberOfRows("22")).thenReturn(2);
+        when(fieldLayoutMock.calculatingNumberOfColumns("22")).thenReturn(2);
+        assertEquals(4, gameInput.totalNumberOfCells(fieldInputMock.inputNextLine()));
     }
+
     @Test
-    public void returnsArrayList(){
+    public void returnsArrayListForField(){
         ArrayList<String> testField = new ArrayList<String>();
         testField.add(".");
         testField.add("*");
         testField.add(".");
         testField.add(".");
-        when(inputMock.inputNextLine())
+        when(fieldInputMock.inputNextLine())
                 .thenReturn("22");
-        gameInput.matrixLayout();
-        when(layoutMock.validateTheFormatandLength(inputMock.inputNextLine())).thenReturn(true);
-        when(contentMock.calculateToTalNumberofcells(inputMock.inputNextLine())).thenReturn(4);
-        when(contentMock.fieldCreated(4)).thenReturn(testField);
+        gameInput.fieldLayout();
+        when(validateFieldLayoutMock.validateTheFormatandLength(fieldInputMock.inputNextLine())).thenReturn(true);
+        when(fieldLayoutMock.calculatingNumberOfRows("22")).thenReturn(2);
+        when(fieldLayoutMock.calculatingNumberOfColumns("22")).thenReturn(2);
+        when(validateFieldContentMock.userFieldInput(4)).thenReturn(testField);
     assertEquals(testField, gameInput.entireField());
     }
 

@@ -1,33 +1,37 @@
 package Game;
 
+import Field.FieldLayout;
 import Validation.FieldInput;
 import Validation.ValidateFieldContent;
 import Validation.ValidateFieldLayout;
 
 import java.util.ArrayList;
-//
 public class GameInput {
-    ArrayList<String> zone;
-    String layoutValues;
-    FieldInput input;
-    ValidateFieldLayout validateLayout;
-    ValidateFieldContent validateContent;
+    String userEnteredFieldLayout;
+    FieldInput fieldInput;
+    ValidateFieldLayout validateFieldLayout;
+    ValidateFieldContent validateFieldContent;
+    FieldLayout fieldLayout;
 
-    public GameInput(FieldInput input, ValidateFieldLayout validateLayout, ValidateFieldContent validateContent) {
-        this.input = input;
-        this.validateLayout = validateLayout;
-        this.validateContent = validateContent;
+    public GameInput(FieldInput fieldInput, ValidateFieldLayout validateFieldLayout, ValidateFieldContent validateFieldContent) {
+        this.fieldInput = fieldInput;
+        this.validateFieldLayout = validateFieldLayout;
+        this.validateFieldContent = validateFieldContent;
     }
 
-    public String matrixLayout() {
-        layoutValues =   validateLayout.enterFieldLayout();
-        return layoutValues;
+    public String fieldLayout() {
+        userEnteredFieldLayout =   validateFieldLayout.enterFieldLayout();
+        return userEnteredFieldLayout;
     }
-    public int totalNumberOfCells(String gridLayout){
-        return validateContent.calculateToTalNumberofcells(layoutValues);
+    public int totalNumberOfCells(String userEnteredFieldLayout){
+        fieldLayout = new FieldLayout(userEnteredFieldLayout);
+        int numberOfRows = fieldLayout.calculatingNumberOfRows(userEnteredFieldLayout);
+        int numberOfColumns = fieldLayout.calculatingNumberOfColumns(userEnteredFieldLayout);
+        return (numberOfRows*numberOfColumns);
+
     }
     public ArrayList<String> entireField(){
-        return validateContent.fieldCreated(totalNumberOfCells(layoutValues));
+        return validateFieldContent.userFieldInput(totalNumberOfCells(userEnteredFieldLayout));
     }
 
 }
